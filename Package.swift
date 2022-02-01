@@ -30,6 +30,9 @@ let package = Package(
             path: "Source",
             exclude: [
                 "SwiftUI additions"
+            ],
+            cSettings: [
+                .define("NS_BLOCK_ASSERTIONS", to: "1")
             ]
         ),
         .target(
@@ -37,7 +40,10 @@ let package = Package(
             dependencies: [
                 "SVGKit"
             ],
-            path: "Source/SwiftUI additions"
+            path: "Source/SwiftUI additions",
+            cSettings: [
+                .define("NS_BLOCK_ASSERTIONS", to: "1")
+            ]
         )
     ]
 )
