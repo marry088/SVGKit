@@ -34,6 +34,7 @@ let package = Package(
             publicHeadersPath: "include",
             cSettings: [
                 .headerSearchPath("privateHeaders")
+                .define("NS_BLOCK_ASSERTIONS", to: "1")
             ]
         ),
         .target(
@@ -41,7 +42,10 @@ let package = Package(
             dependencies: [
                 "SVGKit"
             ],
-            path: "Source/SwiftUI additions"
+            path: "Source/SwiftUI additions",
+            cSettings: [
+                .define("NS_BLOCK_ASSERTIONS", to: "1")
+            ]
         )
     ]
 )
