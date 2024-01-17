@@ -33,7 +33,7 @@ let package = Package(
             ],
             publicHeadersPath: "include",
             cSettings: [
-                .headerSearchPath("privateHeaders")
+                .headerSearchPath("privateHeaders"),
                 .define("NS_BLOCK_ASSERTIONS", to: "1")
             ]
         ),
